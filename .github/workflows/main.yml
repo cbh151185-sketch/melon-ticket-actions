@@ -1,6 +1,7 @@
 name: Check Ticket
 
 on:
+  workflow_dispatch: # 👈 이 문구가 추가되어야 상단에 수동 실행 버튼이 나타납니다!
   schedule:
     - cron: '*/5 * * * *' # 5분마다 자동으로 체크합니다.
 
@@ -11,7 +12,7 @@ jobs:
       - name: Check Melon Ticket
         uses: mooyoul/melon-ticket-actions@v1
         with:
-          product-id: 213346 # 👈 본인의 멜론티켓 공연 ID(prodId) 숫자로 변경하세요.
-          schedule-id: 100001 # 👈 일단 그대로 두고 저장하세요 (다음 단계에서 진짜 번호로 수정).
-          seat-id: 1_0 # 👈 일단 그대로 두고 저장하세요 (다음 단계에서 진짜 번호로 수정).
+          product-id: 213346 # 本인의 멜론티켓 공연 ID(prodId) 숫자를 넣으세요.
+          schedule-id: 100001
+          seat-id: 1_0
           slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
