@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check Melon Ticket
-        uses: mooyoul/melon-ticket-actions@v1
+        uses: mooyoul/melon-ticket-actions@master
         with:
           product-id: 213346 # 本인의 멜론티켓 공연 ID(prodId) 숫자를 넣으세요.
           schedule-id: 100001
